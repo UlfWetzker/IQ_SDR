@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L muSDR-rescue:BNC-lt6231 P1
-U 1 1 5EFD1575
-P 2650 3600
-F 0 "P1" H 2500 3500 50  0000 C CNN
-F 1 "SMA" H 2500 3400 50  0000 C CNN
-F 2 "" H 2650 3600 50  0001 C CNN
-F 3 "" H 2650 3600 50  0000 C CNN
-	1    2650 3600
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR07
 U 1 1 5EFD8B6B
 P 2650 4100
@@ -1140,8 +1129,6 @@ Connection ~ 4450 3950
 Wire Wire Line
 	3650 3600 3650 3850
 Wire Wire Line
-	2800 3600 3650 3600
-Wire Wire Line
 	4750 3000 4750 3050
 Wire Wire Line
 	4450 3050 4750 3050
@@ -1758,4 +1745,17 @@ Wire Wire Line
 	2750 7250 3100 7250
 Wire Wire Line
 	3100 7250 3100 6950
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 5F09F793
+P 2650 3600
+F 0 "J?" H 2578 3838 50  0000 C CNN
+F 1 "Conn_Coaxial" H 2578 3747 50  0000 C CNN
+F 2 "" H 2650 3600 50  0001 C CNN
+F 3 " ~" H 2650 3600 50  0001 C CNN
+	1    2650 3600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3600 3650 3600
 $EndSCHEMATC
