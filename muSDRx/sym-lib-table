@@ -146,4 +146,6 @@
   (lib (name Diode)(type Legacy)(uri ${KIPRJMOD}/Diode.lib)(options "")(descr ""))
   (lib (name muSDR-rescue)(type Legacy)(uri ${KIPRJMOD}/muSDR-rescue.lib)(options "")(descr ""))
   (lib (name muSDRx-rescue)(type Legacy)(uri ${KIPRJMOD}/muSDRx-rescue.lib)(options "")(descr ""))
+  (lib (name lt6231)(type Legacy)(uri ${KIPRJMOD}/lt6231.lib)(options "")(descr ""))
+  (lib (name cx3225)(type Legacy)(uri ${KIPRJMOD}/cx3225.lib)(options "")(descr ""))
 )

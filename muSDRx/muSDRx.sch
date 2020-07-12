@@ -420,7 +420,6 @@ F 3 "~" H 7400 700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7500 2100 7300 2100
-Connection ~ 7300 2100
 $Comp
 L power:GND #PWR052
 U 1 1 5F04ABBF
@@ -550,8 +549,6 @@ Connection ~ 7050 2900
 Wire Wire Line
 	7500 2900 7700 2900
 Wire Wire Line
-	7700 2900 7700 2400
-Wire Wire Line
 	7700 2900 7700 3150
 Connection ~ 7700 2900
 Connection ~ 7050 2500
@@ -678,10 +675,8 @@ Wire Wire Line
 	3900 6900 3900 7250
 Wire Wire Line
 	8050 2400 7900 2400
-Connection ~ 7700 2400
 Wire Wire Line
 	8050 1650 7900 1650
-Connection ~ 7700 1650
 Text Label 1900 5500 0    50   ~ 0
 RS
 Text Label 4750 6200 0    50   ~ 0
@@ -739,7 +734,7 @@ F 3 "~" H 800 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L muSDR-rescue:MMBT2222A-TP-dk_Transistors-Bipolar-BJT-Single Q1
+L dk_Transistors-Bipolar-BJT-Single:MMBT2222A-TP Q1
 U 1 1 5F1096CA
 P 1600 2200
 F 0 "Q1" H 1788 2253 60  0000 L CNN
@@ -865,12 +860,12 @@ Wire Wire Line
 	1500 5100 1500 4800
 Connection ~ 1500 4800
 $Comp
-L LCD1602:LCD1602 U1
+L Display_Character:LCD-016N002L U1
 U 1 1 5F17AD7C
 P 1500 5900
 F 0 "U1" H 1500 6300 50  0000 C CNN
 F 1 "LCD1602" H 1500 6100 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x16_Pitch2.54mm" H 1520 4980 50  0001 C CNN
+F 2 "Display:WC1602A" H 1520 4980 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/37299/37299.pdf" H 2000 5600 50  0001 C CNN
 	1    1500 5900
 	-1   0    0    -1  
@@ -1711,12 +1706,7 @@ F 3 "" H 5500 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5500 1450 4950 1450
-Wire Wire Line
 	4550 1700 4550 1450
-Wire Wire Line
-	4550 1450 4950 1450
-Connection ~ 4950 1450
 $Comp
 L Device:C C21
 U 1 1 5F7C88DF
@@ -1741,7 +1731,6 @@ F 3 "" H 7700 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7700 1950 7300 1950
-Connection ~ 7300 1950
 Wire Wire Line
 	7300 1950 7300 2100
 $Comp
@@ -1792,7 +1781,6 @@ F 3 "" H 4950 5600 50  0001 C CNN
 	1    4950 5600
 	1    0    0    -1  
 $EndComp
-Connection ~ 4950 5600
 Wire Wire Line
 	7900 1800 7900 1650
 $Comp
@@ -2109,7 +2097,6 @@ F 3 "" H 1400 2650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1400 2200 1400 2350
-Connection ~ 1400 2200
 Wire Wire Line
 	1700 2400 1700 2850
 Connection ~ 6800 4100
@@ -2236,17 +2223,6 @@ F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 7350 1750 50  0001 C CNN
 F 3 "https://www.analog.com/en/products/lt6231.html" H 7450 1850 50  0001 C CNN
 	1    7400 1650
 	1    0    0    1   
-$EndComp
-$Comp
-L lt6231:LT6231 U5
-U 2 1 5F00967E
-P 7400 2400
-F 0 "U5" H 7450 2550 50  0000 L CNN
-F 1 "LT6231 (or LM4562)" H 7400 2050 50  0000 L CNN
-F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 7350 2500 50  0001 C CNN
-F 3 "https://www.analog.com/en/products/lt6231.html" H 7450 2600 50  0001 C CNN
-	2    7400 2400
-	1    0    0    -1  
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG0103
@@ -2396,43 +2372,60 @@ NoConn ~ 5900 5950
 NoConn ~ 4350 5300
 NoConn ~ 2200 4050
 $Comp
-L dk_Barrel-Audio-Connectors:SJ1-3523N CON2
-U 1 1 5F160AB4
-P 9100 4700
-F 0 "CON2" H 8772 4700 60  0000 R CNN
-F 1 "SJ1-3523N" H 8772 4647 60  0001 R CNN
-F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 9300 4900 60  0001 L CNN
-F 3 "https://www.cuidevices.com/product/resource/sj1-352xn.pdf" H 9300 5000 60  0001 L CNN
-F 4 "CP1-3523N-ND" H 9300 5100 60  0001 L CNN "Digi-Key_PN"
-F 5 "SJ1-3523N" H 9300 5200 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 9300 5300 60  0001 L CNN "Category"
-F 7 "Barrel - Audio Connectors" H 9300 5400 60  0001 L CNN "Family"
-F 8 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9300 5500 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 9300 5600 60  0001 L CNN "DK_Detail_Page"
-F 10 "CONN JACK STEREO 3.5MM R/A" H 9300 5700 60  0001 L CNN "Description"
-F 11 "CUI Inc." H 9300 5800 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 9300 5900 60  0001 L CNN "Status"
-	1    9100 4700
-	-1   0    0    -1  
-$EndComp
-$Comp
-L dk_Barrel-Audio-Connectors:SJ1-3523N CON1
+L Connector:AudioJack3 CON1
 U 1 1 5F1644E0
-P 9100 1950
-F 0 "CON1" H 8772 1950 60  0000 R CNN
-F 1 "SJ1-3523N" H 8772 1897 60  0001 R CNN
-F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 9300 2150 60  0001 L CNN
-F 3 "https://www.cuidevices.com/product/resource/sj1-352xn.pdf" H 9300 2250 60  0001 L CNN
-F 4 "CP1-3523N-ND" H 9300 2350 60  0001 L CNN "Digi-Key_PN"
-F 5 "SJ1-3523N" H 9300 2450 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 9300 2550 60  0001 L CNN "Category"
-F 7 "Barrel - Audio Connectors" H 9300 2650 60  0001 L CNN "Family"
-F 8 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9300 2750 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 9300 2850 60  0001 L CNN "DK_Detail_Page"
-F 10 "CONN JACK STEREO 3.5MM R/A" H 9300 2950 60  0001 L CNN "Description"
-F 11 "CUI Inc." H 9300 3050 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 9300 3150 60  0001 L CNN "Status"
-	1    9100 1950
+P 8900 1950
+F 0 "CON1" H 8572 1950 60  0000 R CNN
+F 1 "SJ1-3523N" H 8572 1897 60  0001 R CNN
+F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 9100 2150 60  0001 L CNN
+F 3 "https://www.cuidevices.com/product/resource/sj1-352xn.pdf" H 9100 2250 60  0001 L CNN
+F 4 "CP1-3523N-ND" H 9100 2350 60  0001 L CNN "Digi-Key_PN"
+F 5 "SJ1-3523N" H 9100 2450 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 9100 2550 60  0001 L CNN "Category"
+F 7 "Barrel - Audio Connectors" H 9100 2650 60  0001 L CNN "Family"
+F 8 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9100 2750 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 9100 2850 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN JACK STEREO 3.5MM R/A" H 9100 2950 60  0001 L CNN "Description"
+F 11 "CUI Inc." H 9100 3050 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 9100 3150 60  0001 L CNN "Status"
+	1    8900 1950
 	-1   0    0    -1  
 $EndComp
+Wire Wire Line
+	4550 1450 5500 1450
+$Comp
+L Connector:AudioJack3 CON2
+U 1 1 5F160AB4
+P 8900 4700
+F 0 "CON2" H 8572 4700 60  0000 R CNN
+F 1 "SJ1-3523N" H 8572 4647 60  0001 R CNN
+F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 9100 4900 60  0001 L CNN
+F 3 "https://www.cuidevices.com/product/resource/sj1-352xn.pdf" H 9100 5000 60  0001 L CNN
+F 4 "CP1-3523N-ND" H 9100 5100 60  0001 L CNN "Digi-Key_PN"
+F 5 "SJ1-3523N" H 9100 5200 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 9100 5300 60  0001 L CNN "Category"
+F 7 "Barrel - Audio Connectors" H 9100 5400 60  0001 L CNN "Family"
+F 8 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9100 5500 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 9100 5600 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN JACK STEREO 3.5MM R/A" H 9100 5700 60  0001 L CNN "Description"
+F 11 "CUI Inc." H 9100 5800 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 9100 5900 60  0001 L CNN "Status"
+	1    8900 4700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 2900 7700 2400
+$Comp
+L lt6231:LT6231 U5
+U 2 1 5F00967E
+P 7400 2400
+F 0 "U5" H 7450 2550 50  0000 L CNN
+F 1 "LT6231 (or LM4562)" H 7400 2050 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 7350 2500 50  0001 C CNN
+F 3 "https://www.analog.com/en/products/lt6231.html" H 7450 2600 50  0001 C CNN
+	2    7400 2400
+	1    0    0    1   
+$EndComp
+Connection ~ 7300 2100
+Connection ~ 7700 2400
 $EndSCHEMATC
